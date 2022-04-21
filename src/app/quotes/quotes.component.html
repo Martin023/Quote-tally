@@ -1,11 +1,10 @@
 <div class="container">
-    <h1>My Favorite Quotes</h1>
+    <h1>Popular Quotes</h1>
     <hr>
   
-    <div class="row">
-      <div class="col-md-6">
-        <p *ngIf='quotes.length > 0'><button (click)='findHighestVotes()' class="btn btn-outline-info">Check the
-            Best quote</button>
+    <div class="">
+      <div class=" daysQuote disp">
+        <p *ngIf='quotes.length > 0'><button (click)='findHighestVotes()' class="btn btn-outline-info">Quote of the day</button>
         </p>
         <div appHighlightBestQuote>
           <div>
@@ -17,12 +16,12 @@
           <!-- <p id="result"></p>
         <button class="btn btn-primary btn-sm">Best quote</button> -->
           <ul>
-            <div *ngFor='let quote of quotes; let i = index'>
+            <div *ngFor='let quote of quotes; let i = index' class="card">
               <li>
                 {{quote.name}} Created on {{quote.createdDate|date}}.
               </li>
               <br>
-              <div class="row">
+              <div class="row ">
                 <div class="col-md-6">
                   <div>
                     <span class="m-4">{{ quote.clickCounter }}</span><br>
@@ -54,11 +53,11 @@
               <app-quote-details-submitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-details-submitter>
   
               <button (click)='toggleDetailsThree(i)' class="btn btn-warning btn-sm">Show Time Passed</button>
-              <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>
+              <app-date-counter *ngIf='quote.showCreatedDate' [quotes]='quote'></app-date-counter>
   
               <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
-              <app-delete-button *ngIf='quote.showName' [quote]='quote' (isComplete)='completeQuote($event,i)'>
-              </app-delete-button>
+              <app-delete-quotes *ngIf='quote.showName' [quote]='quote' (isComplete)='completeQuote($event,i)'>
+              </app-delete-quotes>
               <hr>
             </div>
   
@@ -66,7 +65,7 @@
   
         </div>
         <div class="col-md-6">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+          <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
         </div>
   
       </div>

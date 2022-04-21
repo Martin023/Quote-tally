@@ -8,7 +8,7 @@ import { Quotesmaker } from '../quotesmaker';
 export class QuoteDetailComponent implements OnInit {
 
 
-  @Input() quote: Quotesmaker; 
+  @Input() quote!: Quotesmaker; 
 
   constructor() { }
 

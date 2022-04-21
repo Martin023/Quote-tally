@@ -10,31 +10,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.spacer {
-  flex: 1;
-}
-
-.toolbar {
-  height: 60px;
-  margin: -8px;
-  display: flex;
-  align-items: center;
-  background-color: rgb(85, 83, 83);
-  color: white;
-  font-weight: 600;
-}
-
-.toolbar img {
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover {
-  opacity: 0.8;
+img{
+ width :100%;
+ height:fit-content;
 }
 
 .content {
@@ -42,8 +20,9 @@
   margin: 32px auto;
   padding: 0 16px;
   /* max-width: 960px; */
-  flex-direction: column;
   align-items: center;
+ 
+  
 }
 
 footer {

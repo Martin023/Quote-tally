@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { Quotesmaker } from '../quotesmaker';
 
 @Component({
@@ -8,10 +8,10 @@ import { Quotesmaker } from '../quotesmaker';
 })
 export class QuotesComponent implements OnInit {
 
-
+   
   quotes:Quotesmaker[]=[
    
-      new Quotesmaker(1, 'You only live once.', 'Mae West', 'Sarah Matamoros', new Date(1956, 3, 14),0),
+     
       new Quotesmaker(2, 'You cannot afford it unless you can buy it twice.', 'Jay Z', 'Wendy Dev', new Date(2017, 6, 9),0), //Jay Z
       new Quotesmaker(3, 'You want a love that consumes you. You want passion and adventure and even a little danger.', 'Damon Salvatore', 'Elijah Gilles', new Date(2011, 8, 20),0), //Damon Salvatore
       new Quotesmaker(4, 'No problem can be solved from the same level of consciousness that created it.', 'Albert Einstein', 'Leonardo Di', new Date(2016, 3, 14),0), //Einstein
@@ -24,22 +24,22 @@ export class QuotesComponent implements OnInit {
       new Quotesmaker(11, 'Logic will get you from A to B. Imagination will take you everywhere.', 'Albert Einstein', 'Erwin Schrödinger', new Date(2009, 3, 14),0),
     ];
 
-    toggleDetails(index) {
+    toggleDetails(index:any) {
       this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
     }
 
-  toggleDetailsTwo(index) {
+  toggleDetailsTwo(index:any) {
     this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
   }
 
-  toggleDetailsThree(index) {
+  toggleDetailsThree(index: any) {
     this.quotes[index].showCreatedDate = !this.quotes[index].showCreatedDate;
   }
   clickCounter = 0;
   dislikeCounter = 0;
 
   highestCounter = 0;
-  bestQuote:string;
+  bestQuote:string="";
 
   findHighestVotes(){
     this.highestCounter = 0;
@@ -50,21 +50,21 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
-  countClick(quote) {
+  countClick(quote: { clickCounter: number; }) {
     quote.clickCounter = quote.clickCounter + 1;
   }
-  addNewQuote(quote) {
+  addNewQuote(quote: Quotesmaker) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     quote.createdDate = new Date(quote.createdDate)
     this.quotes.push(quote)
   }
 
-  toggleDetailsFour(index) {
+  toggleDetailsFour(index: any) {
     this.quotes[index].showName = !this.quotes[index].showName;
   }
 
-  completeQuote(isComplete, index) {
+  completeQuote(isComplete: any, index: number) {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 

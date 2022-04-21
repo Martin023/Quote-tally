@@ -10,7 +10,7 @@ import { Quotesmaker } from '../quotesmaker';
 })
 export class QuoteDetailsSubmitterComponent implements OnInit {
 
-  @Input() quote: Quotesmaker;
+  @Input() quote!: Quotesmaker;
   constructor() { }
 
   ngOnInit(): void {

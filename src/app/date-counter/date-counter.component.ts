@@ -9,7 +9,7 @@ import { Quotesmaker } from '../quotesmaker';
 export class DateCounterComponent implements OnInit {
 
 
-  @Input() quote: Quotesmaker;
+  @Input() quotes!: Quotesmaker;
 
   constructor() { }
 

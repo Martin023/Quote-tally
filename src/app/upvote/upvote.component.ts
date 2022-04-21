@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UpvoteComponent implements OnInit {
 
 
-  @Input() testName: string;
+  @Input()
+  testName!: string;
   NumberOfUpvotes: number = 0;
 
   UpvoteButtonClick() {
