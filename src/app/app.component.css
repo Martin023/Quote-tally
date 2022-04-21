@@ -8,10 +8,11 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
 }
 
 img{
- width :100%;
+ width :100vw;
  height:fit-content;
 }
 
@@ -22,7 +23,7 @@ img{
   padding: 0 16px;
   /* max-width: 960px; */
   justify-content: center;
-  width: auto;
+  width: 100vw;
  
   
 }
@@ -33,6 +34,7 @@ footer {
   display: flex;
   justify-content: center;
   line-height: 20px;
+  width: 100vw;
 }
 
 footer a {
@@ -44,6 +46,12 @@ footer a {
 }
 footer a:hover{
 font-style: bold;
+}
+footer p{
+  padding-top: 10px;
+}
+.navbar{
+  width: 100vw;
 }
 
 

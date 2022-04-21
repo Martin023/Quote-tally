@@ -24,7 +24,7 @@
               
               <br>
               <div class="container buttons">
-                <div class="col-md-6">
+                <div class="">
                   <div>
                     <span class="m-4">Likes: {{ quote.clickCounter }}</span><br>
                     <a href="#" onclick="event.preventDefault()" (click)="countClick(quote)"><button type="button"
@@ -33,16 +33,15 @@
                           style="color:black;"></i></button>
   
                     </a>
-  
                   </div>
-                 
-  
                 </div>
-                <div class="buttons col-md-6">
+ 
+                <div class="">
                   <app-downvote></app-downvote>
+                
                 </div>
               </div>
-  
+             
               <br>
               <button (click)='toggleDetails(i)' class="btn btn-primary btn-sm">Show Author</button>
               <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
@@ -56,6 +55,8 @@
               <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
               <app-delete-quotes *ngIf='quote.showName' [quote]='quote' (isComplete)='completeQuote($event,i)'>
               </app-delete-quotes>
+
+              
               
             </div>
           </div>
