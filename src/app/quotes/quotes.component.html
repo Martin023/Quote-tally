@@ -6,7 +6,7 @@
       <div class=" daysQuote disp">
         <p *ngIf='quotes.length > 0'><button (click)='findHighestVotes()' class="btn btn-outline-info">Quote of the day</button>
         </p>
-        <div appHighlightBestQuote>
+        <div appHighlightBestQuote class="dquotepos container">
           <div>
             <p>{{bestQuote}}</p>
             <p>{{highestCounter}}</p>
@@ -15,16 +15,18 @@
   
           <!-- <p id="result"></p>
         <button class="btn btn-primary btn-sm">Best quote</button> -->
-          <ul>
-            <div *ngFor='let quote of quotes; let i = index' class="card">
-              <li>
+          <div class="all-items">
+            <div *ngFor='let quote of quotes; let i = index' class="card size ">
+              
+               <div >
                 {{quote.name}} Created on {{quote.createdDate|date}}.
-              </li>
+              </div>
+              
               <br>
-              <div class="row ">
+              <div class="container buttons">
                 <div class="col-md-6">
                   <div>
-                    <span class="m-4">{{ quote.clickCounter }}</span><br>
+                    <span class="m-4">Likes: {{ quote.clickCounter }}</span><br>
                     <a href="#" onclick="event.preventDefault()" (click)="countClick(quote)"><button type="button"
                         class="btn btn-outline-dark btn-sm" style="margin-top: 9%;"> Upvote<i
                           class="fa fa-thumbs-up pr-1  ml-4 like" ng-click="count = count + 1" ng-init="count=0"
@@ -33,14 +35,10 @@
                     </a>
   
                   </div>
-                  <!-- <app-upvote></app-upvote>
-                <p id="value">{{NumberOfUpvotes}}</p>
-                <button (click)="UpvoteButtonClick()" type="button" class="btn btn-outline-dark btn-sm"><i
-                    class="fa fa-thumbs-up"></i>
-                  Upvote</button> -->
+                 
   
                 </div>
-                <div class="col-md-6">
+                <div class="buttons col-md-6">
                   <app-downvote></app-downvote>
                 </div>
               </div>
@@ -58,16 +56,16 @@
               <button (click)='toggleDetailsFour(i)' class="btn btn-danger btn-sm">Delete Quote</button>
               <app-delete-quotes *ngIf='quote.showName' [quote]='quote' (isComplete)='completeQuote($event,i)'>
               </app-delete-quotes>
-              <hr>
+              
             </div>
-  
-          </ul>
+          </div>
+          </div>
   
         </div>
-        <div class="col-md-6">
+        <div class="container">
           <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
         </div>
   
       </div>
-      </div>
+      
   
