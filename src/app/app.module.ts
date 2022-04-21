@@ -11,6 +11,7 @@ import { QuoteDetailsSubmitterComponent } from './quote-details-submitter/quote-
 import { DateCounterComponent } from './date-counter/date-counter.component';
 import { DownvoteComponent } from './downvote/downvote.component';
 import { UpvoteComponent } from './upvote/upvote.component';
+import { DeleteQuotesComponent } from './delete-quotes/delete-quotes.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { UpvoteComponent } from './upvote/upvote.component';
     DateCounterComponent,
     DownvoteComponent,
     UpvoteComponent,
+    DeleteQuotesComponent,
     
   ],
   imports: [
