@@ -51,7 +51,7 @@
               <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote'></app-quote-detail>
   
               <button (click)='toggleDetailsTwo(i)' class="btn btn-success btn-sm">Show Submitter</button>
-              <app-quote-detailsubmitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-detailsubmitter>
+              <app-quote-details-submitter *ngIf='quote.showSubmitter' [quote]='quote'></app-quote-details-submitter>
   
               <button (click)='toggleDetailsThree(i)' class="btn btn-warning btn-sm">Show Time Passed</button>
               <app-date-counter *ngIf='quote.showCreatedDate' [quote]='quote'></app-date-counter>

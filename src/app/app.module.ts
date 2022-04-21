@@ -9,6 +9,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteDetailsSubmitterComponent } from './quote-details-submitter/quote-details-submitter.component';
 import { DateCounterComponent } from './date-counter/date-counter.component';
+import { DownvoteComponent } from './downvote/downvote.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DateCounterComponent } from './date-counter/date-counter.component';
     QuoteDetailComponent,
     QuoteDetailsSubmitterComponent,
     DateCounterComponent,
+    DownvoteComponent,
     
   ],
   imports: [
