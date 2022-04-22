@@ -26,12 +26,15 @@ h1{
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    
-    
-
+}
+.votes{
+    display: flex;
+    gap: 20%;
+}
+.btn{
+    width: 100%;
 }
 .buttons{
-    display:flex;
-
+    margin-bottom: 0%;
 }
 

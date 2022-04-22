@@ -1,7 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster&display=swap'); */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 :host {
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
   font-family: 'Abril Fatface', cursive;
   font-size: 17px;
   color: #333;
@@ -44,7 +43,7 @@ footer a {
   font-size: large;
   color: red;
 }
-footer a:hover{
+a:hover{
 font-style: bold;
 }
 footer p{
